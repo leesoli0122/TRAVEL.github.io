@@ -1,0 +1,5 @@
+3배수로 뽑음
+ic_arrow 20x20
+ic_close 24x24
+ico_arrow_prev 24x24
+ico_menu_header 24x24
