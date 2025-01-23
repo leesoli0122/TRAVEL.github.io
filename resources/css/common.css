@@ -1,3 +1,48 @@
+:root {
+    --font12:0.75rem;
+    --font14:0.875rem;
+    --font16:1rem;
+    --font18:1.125rem;
+    --font20:1.25rem;
+    --font22:1.375rem;
+    --font24:1.5rem;
+    --font28:1.75rem;
+    --font32:2rem;
+    --font40:2.5rem;
+    --font50:3.125rem;
+    
+    --w-regular:400;
+    --w-bold:700;
+
+    --white:#FFFFFF;
+    --title:#111111;
+    --normal:#333333;
+    --inactive:#666666;
+    --subtitle:#757575;
+    --error:#FF0000;
+
+    --border1:#DDDDDD;
+    --border2: #cccccc;
+    --border3: #EDEDED;
+
+    --primary:#0F3862;
+    --secondary: #056ED6;
+
+    --tag1:#E62348;
+    --tag2:#802CE3;
+    --tag3:#A73737;
+    --tag4:#00A2C4;
+    --tag5:#EFF4FF;
+    --tag6:#F3EBFF;
+    --tag7:#FFEFEF;
+
+    --background1:#EAEAEA;
+    --background2:#F8F8F8;
+    --background3:#5474c0;
+    --background4:#F9FAFC;
+    --background5:#FCF9F9;
+}
+
 .wrap { width:100%; }
 .ir { position:absolute; clip:rect(1px 1px 1px 1px); width:1px; height:1px; margin:-1px; overflow: hidden; }/* 폰트숨김 */
 .dp-none { display:none; }
@@ -14,9 +59,16 @@ skipnavi #스킵네비
 /*********************************************************************
 header-wrap #헤더
 *********************************************************************/
-#headerWrap { position:fixed; top:0; z-index:200; width:100%; }
-.header-wrap { padding:0 20px; }
-.header-wrap .nav .menu-wrap li { display:inline-block; }
+header .left-menu,
+header .right-menu { position:absolute;  top:0; bottom:0; height:45px; z-index:2; padding:0; font-size:0; }
+header .left-menu  { left:15px; }
+header .right-menu { right:15px;  display:flex; gap:6px; }
+header .left-menu a.btn-prev:before,
+header .right-menu a.btn-menu:before,
+header .right-menu a.btn-alarm:before { content:""; display:block; height:45px; width:24px; }
+header .left-menu a.btn-prev::before {  background:url(../images/common/ico_arrow_prev.png) no-repeat 50%/24px auto; }
+header .right-menu a.btn-menu::before { background:url(../images/common/ico_menu_header.png) no-repeat 50%/24px auto; }
+header h1.center { overflow:hidden; margin:0; padding:0; font-size:1rem; font-weight:500; line-height:45px; text-overflow:ellipsis; white-space:nowrap; text-align:center; }
 
 /*********************************************************************
 btn-top #탑 버튼

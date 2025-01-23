@@ -1,0 +1,79 @@
+:root{
+    --font12:0.75rem;
+    --font14:0.875rem;
+    --font16:1rem;
+    --font18:1.125rem;
+    --font20:1.25rem;
+    --font22:1.375rem;
+    --font24:1.5rem;
+    --font28:1.75rem;
+    --font32:2rem;
+    --font40:2.5rem;
+    --font50:3.125rem;
+    
+    --w-regular:400;
+    --w-medium:500;
+    --w-bold:700;
+    --w-black:900;
+
+    --white:#FFFFFF;
+    --title:#111111;
+    --normal:#333333;
+    --inactive:#666666;
+    --subtitle:#757575;
+    --error:#FF0000;
+
+    --border1:#DDDDDD;
+    --border2: #cccccc;
+    --border3: #EDEDED;
+
+    --primary:#0F3862;
+    --secondary: #056ED6;
+
+    --tag1:#E62348;
+    --tag2:#802CE3;
+    --tag3:#A73737;
+    --tag4:#00A2C4;
+    --tag5:#EFF4FF;
+    --tag6:#F3EBFF;
+    --tag7:#FFEFEF;
+
+    --background1:#EAEAEA;
+    --background2:#F8F8F8;
+    --background3:#5474c0;
+    --background4:#F9FAFC;
+    --background5:#FCF9F9;
+
+    /* A4
+        화면용(72 DPI): 595 × 842 px
+        인쇄용(300 DPI): 2480 × 3508 px
+    */
+    /* A3
+        화면용(72 DPI): 842 × 1191 px
+        인쇄용(300 DPI): 3508 × 4961 px
+    */
+}
+
+/*********************************************************************
+공통
+*********************************************************************/
+.wrap { padding-top:0; }
+.schedule-wrap { display:grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); margin:0 auto; width:842px; height:1200px; border:1px solid var(--normal); }
+.schedule-wrap + .schedule-wrap { margin-top:40px; }
+.schedule-wrap .sch-list { position:relative; padding:10px 10px 20px; border:1px solid var(--normal); }
+.schedule-wrap .sch-list h2 { padding:10px; font-size:var(--font18); border-bottom: 1px solid #000; }
+.sch-list > p { margin:10px 0; padding:0 10px; }
+.sch-list > p:first-of-type { margin-top:20px; }
+.sch-list p span { padding-left:8px; font-weight:var(--w-bold); }
+
+.page-number { position: absolute; bottom: 10px; right: 10px; font-size: 14px; color: #666; }
+
+/* 네덜란드어 */
+.num-wrap { display:grid; grid-template-columns:repeat(5, 1fr); grid-template-rows:repeat(4, 1fr); margin-top:20px; text-align:center; border:1px solid var(--border1); }
+.num-wrap li { border-top:1px solid var(--border2); border-right:1px solid var(--border2); }
+.num-wrap li:nth-child(-n+5) { border-top: none; }
+.num-wrap li:nth-child(5n) { border-right:none; }
+.num-wrap li p { padding:3px 0; border-bottom:1px solid var(--border3); }
+.num-wrap li p.read { border-bottom:none; }
+
+

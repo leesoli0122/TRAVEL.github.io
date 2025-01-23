@@ -1,54 +1,53 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+html { overflow-y:auto; }
+body { width:100%; height:100%; font-size:16px; font-weight:400; color:var(--normal); text-align: left; background-color: #fff; }
+ul, ol { list-style:none; }
+*,
+*::before,
+*::after { -webkit-box-sizing: border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-text-size-adjust:none; max-height:1000000px; word-break:keep-all; word-wrap:break-word; outline:none; }
+.wrap { position:relative; display:block; padding-top:144px; }
+header { position:fixed; top:0; left:0; z-index:10; width:100%; min-height:45px; background-color: #FFFFFF; }
+/* form { height:100%; } 비밀번호 찾기 화면: 높이를 못 찾아서 주석 처리 */
+html, body, div, ul, ol, dl, li, dt, dd, p, h1, h2, h3, h4, h5, h6, table, thead, tbody, tr, th, td, caption, address,
+canvas, details, figure, figcaption, footer, header, menu, nav, section, article, aside,
+form, fieldset, button, select, textarea, input, fieldset, legend, label, a, span, strong, em, address, dfn, small, i, b, ::before, ::after { font-family: 'Pretendard', /*'Apple SD Gothic Neo',*/ 'Noto Sans', sans-serif; position:relative; margin:0; padding:0; border:0; list-style:none; word-break:break-all; word-wrap:inherit; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -ms-overflow-style:scrollbar; }
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
+[tabindex="-1"]:focus-visible { outline: 0 !important; }
+ul, ol, li, dl, dt, dd  { list-style:none; margin:0; padding:0; box-sizing: border-box; }
+#contentWrap > .table-type { margin-top:28px; }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col { width:100%; }
+.form-row { gap:10px; }
+.form-wrap.login .form-row { gap:0; }
+.form-row:has(.input-hyphen) { gap:4px; }
+
+.wrap.login .contents-wrap { margin-top:0; }
+.contents-wrap > .table-type { margin-top:28px; }
+
+/* font */
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url(../../font/woff2-subset/Pretendard-Black.subset.woff2) format('woff2'), url(../../font/woff-subset/Pretendard-Black.subset.woff) format('woff'), url(../../font/woff2/Pretendard-Black.woff2) format('woff2'), url(../../font/woff/Pretendard-Black.woff) format('woff');
 }
 
-label { display: inline-block; font-size:1rem; line-height:1.188rem; color:var(--normal); }
-legend, caption{width:0; height:0; text-indent:-10000px; font-size:0; line-height:0; position:absolute; left:-99999px; }
-a { /* color: #007bff; */ color:var(--normal); text-decoration:none; background-color:transparent; }
-img,
-svg { vertical-align:middle; border-style:none; }
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../../font/woff2-subset/Pretendard-Bold.subset.woff2) format('woff2'), url(../../font/woff-subset/Pretendard-Bold.subset.woff) format('woff'), url(../../font/woff2/Pretendard-Bold.woff2) format('woff2'), url(../../font/woff/Pretendard-Bold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard','NotoSanKR';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium', 'NotoSanKR Medium'), url(../../font/woff2-subset/Pretendard-Medium.subset.woff2) format('woff2'), url(../../font/woff-subset/Pretendard-Medium.subset.woff) format('woff'), url(../../font/woff2/Pretendard-Medium.woff2) format('woff2'), url(../../font/woff/Pretendard-Medium.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../../font/woff2-subset/Pretendard-Regular.subset.woff2) format('woff2'), url(../../font/woff-subset/Pretendard-Regular.subset.woff) format('woff'), url(../../font/woff2/Pretendard-Regular.woff2) format('woff2'), url(../../font/woff/Pretendard-Regular.woff) format('woff');
+}
